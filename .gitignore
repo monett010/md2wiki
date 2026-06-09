@@ -1,0 +1,3 @@
+/wikifiles
+*.md
+!README.md
