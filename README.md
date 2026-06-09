@@ -1,8 +1,12 @@
 # Md2Wiki
-*Converts all markdown files in a directory to WikiMarkup*
+Converts all Markdown files in a directory to WikiMedia format
 
 ## Setup
-Do ``chmod +x`` and copy md2wiki.py to ``/usr/bin/md2wiki``
+```bash
+chmod +x md2wiki.py
+
+sudo cp md2wiki.py /usr/bin/md2wiki
+```
 
 ## Use
 1) Navigate to the directory containing the files you want to convert, and type ``md2wiki``
