@@ -2,7 +2,7 @@
 
 import os
 import subprocess
-
+import sys
 
 # Converts md file to .wiki
 def convert_file (filename)->None:
@@ -34,10 +34,20 @@ def convert_directory ()->None:
             counter = counter + 1
 
 
-# Converts the directory and moves the files to directory called "wikifiles"
-convert_directory()
+# If a filename is input, converts the file
+if (len(sys.argv) == 2):
+    if (os.path.splitext(sys.argv[1])[1] == ".md"):
+        convert_file(sys.argv[1])
+        print ("Converted file.")
+    else:
+        print ("Please input the filename of a markdown file.")
 
-if (os.path.isdir("wikifiles") != True):
-    subprocess.run(["mkdir", "wikifiles"])
-print ("Moving files...")
-subprocess.run("mv *.wiki wikifiles",shell=True)
+# If no filename is input...
+if (len(sys.argv) < 2):
+    # Converts the directory and moves the files to directory called "wikifiles"
+    convert_directory()
+    
+    if (os.path.isdir("wikifiles") != True):
+        subprocess.run(["mkdir", "wikifiles"])
+    print ("Moving files...")
+    subprocess.run("mv *.wiki wikifiles",shell=True)
