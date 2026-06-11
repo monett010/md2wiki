@@ -1,5 +1,5 @@
 # Md2Wiki
-Converts all Markdown files to WikiMedia format
+Converts Markdown files to WikiMedia format
 
 ## Setup
 ```bash
