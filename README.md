@@ -25,4 +25,6 @@ The .wiki files will be in a directory called ``wikifiles``.
 ## Requirements
 * Python 3
 
-* Pandoc
+* Linux
+
+* [Pandoc](https://pandoc.org/installing.html)
